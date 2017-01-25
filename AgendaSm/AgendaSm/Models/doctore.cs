@@ -1,12 +1,17 @@
 namespace AgendaSm.Models
 {
-    using System;
+  using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
+    using System.Data.Entity;
 
     [Table("agendasm.doctores")]
+
+   
+        #region DatosAutomaticos
     public partial class doctore
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -38,7 +43,10 @@ namespace AgendaSm.Models
         [StringLength(50)]
         public string sCedula { get; set; }
 
-        public bool? bSexo { get; set; }
+        //public bool? bSexo { get; set; }
+        [Required]
+        [StringLength(5)]
+        public string sSexo { get; set; }
 
         public TimeSpan? tHentrada { get; set; }
 
@@ -55,5 +63,48 @@ namespace AgendaSm.Models
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<consulta> consultas { get; set; }
+
+    #endregion
+        
+        #region Codigo Guardar Medicos
+        public void Guardar(doctore nDoctor)
+        {
+            try
+            {
+                using (var ctx = new DataModel())
+                {
+                    if (nDoctor.id_doctor > 0)
+                    {
+                        ctx.Entry(nDoctor).State = EntityState.Modified;
+                    }
+                    else
+                    {
+                        ctx.Entry(nDoctor).State = EntityState.Added;
+                    }
+                    ctx.SaveChanges();
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        #endregion
+
+        #region Listar datos Doctores
+        public List<doctore> getAll(Boolean status)
+        {
+            try
+            {
+                using (var ctx = new DataModel())
+                {
+                    return ctx.doctores.Where(r => r.bStatus == status).ToList();
+                }
+            }
+            catch (Exception) { throw; }
+        }
+#endregion
+
+
     }
 }

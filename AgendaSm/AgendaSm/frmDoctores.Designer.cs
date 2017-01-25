@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.btnMenu = new System.Windows.Forms.Button();
             this.gpDatos = new System.Windows.Forms.GroupBox();
+            this.cbSalida = new System.Windows.Forms.ComboBox();
+            this.cbEntrada = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCurp = new System.Windows.Forms.TextBox();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFemenino = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +61,7 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDoctores = new System.Windows.Forms.DataGridView();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,14 +69,12 @@
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.derechohabiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.cbActivos = new System.Windows.Forms.CheckBox();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.gpDatos.SuspendLayout();
             this.gpHerramientas.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).BeginInit();
             this.SuspendLayout();
             // 
             // btnMenu
@@ -98,14 +98,14 @@
             // 
             this.gpDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gpDatos.Controls.Add(this.comboBox2);
-            this.gpDatos.Controls.Add(this.comboBox1);
+            this.gpDatos.Controls.Add(this.cbSalida);
+            this.gpDatos.Controls.Add(this.cbEntrada);
             this.gpDatos.Controls.Add(this.label5);
             this.gpDatos.Controls.Add(this.label1);
             this.gpDatos.Controls.Add(this.label11);
-            this.gpDatos.Controls.Add(this.textBox3);
+            this.gpDatos.Controls.Add(this.txtCedula);
             this.gpDatos.Controls.Add(this.label10);
-            this.gpDatos.Controls.Add(this.textBox2);
+            this.gpDatos.Controls.Add(this.txtCurp);
             this.gpDatos.Controls.Add(this.rbMasculino);
             this.gpDatos.Controls.Add(this.rbFemenino);
             this.gpDatos.Controls.Add(this.label4);
@@ -126,6 +126,48 @@
             this.gpDatos.TabStop = false;
             this.gpDatos.Text = "   Datos del Doctor   ";
             this.gpDatos.Visible = false;
+            // 
+            // cbSalida
+            // 
+            this.cbSalida.FormattingEnabled = true;
+            this.cbSalida.Items.AddRange(new object[] {
+            "8 : 00 A.M",
+            "9 : 00 A.M",
+            "10 : 00 A.M",
+            "11 : 00 A.M",
+            "12 : 00 P.M",
+            "13 : 00 P.M",
+            "14 : 00 P.M",
+            "15 : 00 P.M",
+            "16 : 00 P.M",
+            "17 : 00 P.M",
+            "18 : 00 P.M",
+            "19 : 00 P.M"});
+            this.cbSalida.Location = new System.Drawing.Point(768, 53);
+            this.cbSalida.Name = "cbSalida";
+            this.cbSalida.Size = new System.Drawing.Size(91, 21);
+            this.cbSalida.TabIndex = 52;
+            // 
+            // cbEntrada
+            // 
+            this.cbEntrada.FormattingEnabled = true;
+            this.cbEntrada.Items.AddRange(new object[] {
+            "8 : 00 A.M",
+            "9 : 00 A.M",
+            "10 : 00 A.M",
+            "11 : 00 A.M",
+            "12 : 00 P.M",
+            "13 : 00 P.M",
+            "14 : 00 P.M",
+            "15 : 00 P.M",
+            "16 : 00 P.M",
+            "17 : 00 P.M",
+            "18 : 00 P.M",
+            "19 : 00 P.M"});
+            this.cbEntrada.Location = new System.Drawing.Point(655, 54);
+            this.cbEntrada.Name = "cbEntrada";
+            this.cbEntrada.Size = new System.Drawing.Size(91, 21);
+            this.cbEntrada.TabIndex = 51;
             // 
             // label5
             // 
@@ -154,12 +196,12 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "Cedula Profesional";
             // 
-            // textBox3
+            // txtCedula
             // 
-            this.textBox3.Location = new System.Drawing.Point(456, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 20);
-            this.textBox3.TabIndex = 45;
+            this.txtCedula.Location = new System.Drawing.Point(456, 152);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(165, 20);
+            this.txtCedula.TabIndex = 45;
             // 
             // label10
             // 
@@ -170,12 +212,12 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "CURP";
             // 
-            // textBox2
+            // txtCurp
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 20);
-            this.textBox2.TabIndex = 43;
+            this.txtCurp.Location = new System.Drawing.Point(26, 152);
+            this.txtCurp.Name = "txtCurp";
+            this.txtCurp.Size = new System.Drawing.Size(252, 20);
+            this.txtCurp.TabIndex = 43;
             // 
             // rbMasculino
             // 
@@ -302,6 +344,7 @@
             this.gpHerramientas.TabIndex = 50;
             this.gpHerramientas.TabStop = false;
             this.gpHerramientas.Visible = false;
+            this.gpHerramientas.Enter += new System.EventHandler(this.gpHerramientas_Enter);
             // 
             // btnEliminar
             // 
@@ -361,6 +404,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(46, 45);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             this.btnGuardar.MouseHover += new System.EventHandler(this.btnMenu_MouseHover);
             // 
             // groupBox1
@@ -413,23 +457,23 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.MouseHover += new System.EventHandler(this.btnMenu_MouseHover);
             // 
-            // dataGridView1
+            // dgvDoctores
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvDoctores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDoctores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoctores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.No,
             this.ApellidoP,
             this.ApellidoM,
             this.Nombre,
             this.Edad,
             this.derechohabiente});
-            this.dataGridView1.Location = new System.Drawing.Point(50, 308);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1065, 167);
-            this.dataGridView1.TabIndex = 51;
+            this.dgvDoctores.Location = new System.Drawing.Point(50, 308);
+            this.dgvDoctores.Name = "dgvDoctores";
+            this.dgvDoctores.Size = new System.Drawing.Size(1065, 167);
+            this.dgvDoctores.TabIndex = 51;
             // 
             // No
             // 
@@ -476,67 +520,25 @@
             this.label12.TabIndex = 52;
             this.label12.Text = "No. Pacientes : ";
             // 
-            // checkBox2
+            // cbActivos
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1003, 486);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(112, 17);
-            this.checkBox2.TabIndex = 53;
-            this.checkBox2.Text = "Pacientes de Baja";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "8 : 00 A.M",
-            "9 : 00 A.M",
-            "10 : 00 A.M",
-            "11 : 00 A.M",
-            "12 : 00 P.M",
-            "13 : 00 P.M",
-            "14 : 00 P.M",
-            "15 : 00 P.M",
-            "16 : 00 P.M",
-            "17 : 00 P.M",
-            "18 : 00 P.M",
-            "19 : 00 P.M"});
-            this.comboBox1.Location = new System.Drawing.Point(655, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 21);
-            this.comboBox1.TabIndex = 51;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "8 : 00 A.M",
-            "9 : 00 A.M",
-            "10 : 00 A.M",
-            "11 : 00 A.M",
-            "12 : 00 P.M",
-            "13 : 00 P.M",
-            "14 : 00 P.M",
-            "15 : 00 P.M",
-            "16 : 00 P.M",
-            "17 : 00 P.M",
-            "18 : 00 P.M",
-            "19 : 00 P.M"});
-            this.comboBox2.Location = new System.Drawing.Point(768, 53);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(91, 21);
-            this.comboBox2.TabIndex = 52;
+            this.cbActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbActivos.AutoSize = true;
+            this.cbActivos.Location = new System.Drawing.Point(1003, 486);
+            this.cbActivos.Name = "cbActivos";
+            this.cbActivos.Size = new System.Drawing.Size(112, 17);
+            this.cbActivos.TabIndex = 53;
+            this.cbActivos.Text = "Pacientes de Baja";
+            this.cbActivos.UseVisualStyleBackColor = true;
             // 
             // frmDoctores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 528);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.cbActivos);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDoctores);
             this.Controls.Add(this.gpHerramientas);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gpDatos);
@@ -547,12 +549,13 @@
             this.Name = "frmDoctores";
             this.Text = "Salud Mental - Doctores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmDoctores_Load);
             this.gpDatos.ResumeLayout(false);
             this.gpDatos.PerformLayout();
             this.gpHerramientas.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoctores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,9 +566,9 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.GroupBox gpDatos;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCurp;
         private System.Windows.Forms.RadioButton rbMasculino;
         private System.Windows.Forms.RadioButton rbFemenino;
         private System.Windows.Forms.Label label4;
@@ -588,7 +591,7 @@
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDoctores;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoP;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoM;
@@ -596,11 +599,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
         private System.Windows.Forms.DataGridViewTextBoxColumn derechohabiente;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox cbActivos;
         private System.Windows.Forms.ToolTip ttMensaje;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSalida;
+        private System.Windows.Forms.ComboBox cbEntrada;
     }
 }

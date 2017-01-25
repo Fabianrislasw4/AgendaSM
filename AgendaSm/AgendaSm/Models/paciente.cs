@@ -91,6 +91,8 @@ namespace AgendaSm.Models
             }
         }
 
+
+
         public List<paciente> getAll(Boolean status)
         {
             try
