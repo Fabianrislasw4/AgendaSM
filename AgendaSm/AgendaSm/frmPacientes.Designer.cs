@@ -71,7 +71,7 @@
             this.sAmaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sCurp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtFecnac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTelEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,7 +128,7 @@
             this.txtNexpediente.Location = new System.Drawing.Point(637, 32);
             this.txtNexpediente.Name = "txtNexpediente";
             this.txtNexpediente.Size = new System.Drawing.Size(102, 20);
-            this.txtNexpediente.TabIndex = 45;
+            this.txtNexpediente.TabIndex = 10;
             // 
             // label10
             // 
@@ -144,7 +144,7 @@
             this.txtCurp.Location = new System.Drawing.Point(26, 152);
             this.txtCurp.Name = "txtCurp";
             this.txtCurp.Size = new System.Drawing.Size(252, 20);
-            this.txtCurp.TabIndex = 43;
+            this.txtCurp.TabIndex = 7;
             // 
             // label9
             // 
@@ -160,7 +160,7 @@
             this.txtTelEmergencia.Location = new System.Drawing.Point(456, 143);
             this.txtTelEmergencia.Name = "txtTelEmergencia";
             this.txtTelEmergencia.Size = new System.Drawing.Size(144, 20);
-            this.txtTelEmergencia.TabIndex = 41;
+            this.txtTelEmergencia.TabIndex = 9;
             // 
             // rbMasculino
             // 
@@ -168,7 +168,7 @@
             this.rbMasculino.Location = new System.Drawing.Point(352, 106);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(73, 17);
-            this.rbMasculino.TabIndex = 39;
+            this.rbMasculino.TabIndex = 6;
             this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "Masculino";
             this.rbMasculino.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.rbFemenino.Location = new System.Drawing.Point(352, 83);
             this.rbFemenino.Name = "rbFemenino";
             this.rbFemenino.Size = new System.Drawing.Size(71, 17);
-            this.rbFemenino.TabIndex = 40;
+            this.rbFemenino.TabIndex = 5;
             this.rbFemenino.TabStop = true;
             this.rbFemenino.Text = "Femenino";
             this.rbFemenino.UseVisualStyleBackColor = true;
@@ -195,7 +195,7 @@
             this.cbDerechohabiente.Location = new System.Drawing.Point(637, 105);
             this.cbDerechohabiente.Name = "cbDerechohabiente";
             this.cbDerechohabiente.Size = new System.Drawing.Size(150, 21);
-            this.cbDerechohabiente.TabIndex = 38;
+            this.cbDerechohabiente.TabIndex = 11;
             this.cbDerechohabiente.Text = "Eliga su opción...";
             // 
             // label5
@@ -222,7 +222,7 @@
             this.dtpFecNac.Location = new System.Drawing.Point(26, 89);
             this.dtpFecNac.Name = "dtpFecNac";
             this.dtpFecNac.Size = new System.Drawing.Size(176, 20);
-            this.dtpFecNac.TabIndex = 35;
+            this.dtpFecNac.TabIndex = 4;
             this.dtpFecNac.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
             // 
             // label7
@@ -275,28 +275,28 @@
             this.txtTelefono.Location = new System.Drawing.Point(456, 86);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(144, 20);
-            this.txtTelefono.TabIndex = 26;
+            this.txtTelefono.TabIndex = 8;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(352, 32);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(223, 20);
-            this.txtNombre.TabIndex = 27;
+            this.txtNombre.TabIndex = 3;
             // 
             // txtAmaterno
             // 
             this.txtAmaterno.Location = new System.Drawing.Point(181, 32);
             this.txtAmaterno.Name = "txtAmaterno";
             this.txtAmaterno.Size = new System.Drawing.Size(165, 20);
-            this.txtAmaterno.TabIndex = 28;
+            this.txtAmaterno.TabIndex = 2;
             // 
             // txtApaterno
             // 
             this.txtApaterno.Location = new System.Drawing.Point(26, 32);
             this.txtApaterno.Name = "txtApaterno";
             this.txtApaterno.Size = new System.Drawing.Size(149, 20);
-            this.txtApaterno.TabIndex = 29;
+            this.txtApaterno.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -436,7 +436,7 @@
             this.sAmaterno,
             this.sNombre,
             this.sCurp,
-            this.bSexo,
+            this.sSexo,
             this.dtFecnac,
             this.sTelefono,
             this.sTelEmergencia});
@@ -481,7 +481,7 @@
             this.btnMenu.Location = new System.Drawing.Point(12, 12);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(47, 45);
-            this.btnMenu.TabIndex = 8;
+            this.btnMenu.TabIndex = 1;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             this.btnMenu.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
@@ -491,42 +491,50 @@
             this.id_paciente.DataPropertyName = "id_paciente";
             this.id_paciente.HeaderText = "No.";
             this.id_paciente.Name = "id_paciente";
+            this.id_paciente.Visible = false;
+            this.id_paciente.Width = 50;
             // 
             // sNexpediente
             // 
             this.sNexpediente.DataPropertyName = "sNexpediente";
             this.sNexpediente.HeaderText = "No. Expediente";
             this.sNexpediente.Name = "sNexpediente";
+            this.sNexpediente.Width = 120;
             // 
             // sApaterno
             // 
             this.sApaterno.DataPropertyName = "sApaterno";
             this.sApaterno.HeaderText = "Apellido Paterno";
             this.sApaterno.Name = "sApaterno";
+            this.sApaterno.Width = 150;
             // 
             // sAmaterno
             // 
             this.sAmaterno.DataPropertyName = "sAmaterno";
             this.sAmaterno.HeaderText = "Apellido Materno";
             this.sAmaterno.Name = "sAmaterno";
+            this.sAmaterno.Width = 150;
             // 
             // sNombre
             // 
             this.sNombre.DataPropertyName = "sNombre";
             this.sNombre.HeaderText = "Nombre (s)";
             this.sNombre.Name = "sNombre";
+            this.sNombre.Width = 150;
             // 
             // sCurp
             // 
             this.sCurp.DataPropertyName = "sCurp";
             this.sCurp.HeaderText = "CURP";
             this.sCurp.Name = "sCurp";
+            this.sCurp.Width = 150;
             // 
-            // bSexo
+            // sSexo
             // 
-            this.bSexo.DataPropertyName = "bSexo";
-            this.bSexo.HeaderText = "Sexo";
-            this.bSexo.Name = "bSexo";
+            this.sSexo.DataPropertyName = "sSexo";
+            this.sSexo.HeaderText = "Sexo";
+            this.sSexo.Name = "sSexo";
+            this.sSexo.Width = 40;
             // 
             // dtFecnac
             // 
@@ -545,6 +553,7 @@
             this.sTelEmergencia.DataPropertyName = "sTelEmergencia";
             this.sTelEmergencia.HeaderText = "Teléfono de Emergencia";
             this.sTelEmergencia.Name = "sTelEmergencia";
+            this.sTelEmergencia.Width = 150;
             // 
             // frmPacientes
             // 
@@ -558,7 +567,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.gpDatos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPacientes";
@@ -621,7 +630,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sAmaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn sNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn sCurp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dtFecnac;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTelefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn sTelEmergencia;

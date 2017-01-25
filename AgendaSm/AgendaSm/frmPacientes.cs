@@ -20,6 +20,11 @@ namespace AgendaSm
         {
             var datos = conte.getAll(cbActivos.Checked);
             dgvDatos.DataSource = datos;
+
+            DateTime fecha = conte.dtFecnac;
+
+
+
         }
         public frmPacientes()
         {
@@ -34,8 +39,7 @@ namespace AgendaSm
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
-            LlenarCuadricula();
-            
+            LlenarCuadricula();  
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -73,6 +77,7 @@ namespace AgendaSm
             conte.sTelEmergencia = txtTelEmergencia.Text.Trim();
             conte.sNexpediente = txtNexpediente.Text.Trim();
             conte.sDerechohabiente = cbDerechohabiente.Text.Trim();
+            conte.bActivo = true;
 
             if (rbMasculino.Checked == true)
             {
@@ -83,7 +88,11 @@ namespace AgendaSm
                 conte.sSexo = "F";
             }
 
+            conte.dtFecnac = Convert.ToDateTime(dtpFecNac.Text);
             conte.Guardar(conte);
+
+            LlenarCuadricula();
+            LimpiarCampos();
         }
 
         private void dgvDatos_DataSourceChanged(object sender, EventArgs e)
@@ -91,6 +100,19 @@ namespace AgendaSm
             lblTotalRegistros.Text = "Total Pacientes: " + dgvDatos.Rows.Count.ToString();
         }
 
+        public void LimpiarCampos(){
+            txtApaterno.Clear();
+            txtAmaterno.Clear();
+            txtNombre.Clear();
+            dtpFecNac.ResetText();
+            txtCurp.Clear();
+            rbFemenino.ResetText();
+            rbMasculino.ResetText();
+            txtTelefono.Clear();
+            txtTelEmergencia.Clear();
+            txtNexpediente.Clear();
+            cbDerechohabiente.ResetText();
+        }
       
     }
 }
