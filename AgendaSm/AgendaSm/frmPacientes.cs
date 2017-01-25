@@ -7,14 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgendaSm.Models;
 
 namespace AgendaSm
 {
     public partial class frmPacientes : Form
     {
+        paciente conte = new paciente();
+        frmPacientes frmPaciente;
+
+        public void LlenarCuadricula()
+        {
+            var datos = conte.getAll(cbActivos.Checked);
+            dgvDatos.DataSource = datos;
+        }
         public frmPacientes()
         {
             InitializeComponent();
+            dgvDatos.AutoGenerateColumns = false;
+        }
+        public frmPacientes(frmPacientes fPaciente)
+        {
+            InitializeComponent();
+            this.frmPaciente = fPaciente;
+        }
+
+        private void frmPacientes_Load(object sender, EventArgs e)
+        {
+            LlenarCuadricula();
+            
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -41,5 +62,35 @@ namespace AgendaSm
             ttMensaje.SetToolTip(btnEliminar, "Borrar Paciente");
             ttMensaje.SetToolTip(dtpFecNac, "Se puede agregar manualmente la fecha. Ejemplo : 10/03/2000 'Viernes 10 de Marzo del 2000.'");
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            conte.sApaterno = txtApaterno.Text.Trim();
+            conte.sAmaterno = txtAmaterno.Text.Trim();
+            conte.sNombre = txtNombre.Text.Trim();
+            conte.sCurp = txtCurp.Text.Trim();
+            conte.sTelefono = txtTelefono.Text.Trim();
+            conte.sTelEmergencia = txtTelEmergencia.Text.Trim();
+            conte.sNexpediente = txtNexpediente.Text.Trim();
+            conte.sDerechohabiente = cbDerechohabiente.Text.Trim();
+
+            if (rbMasculino.Checked == true)
+            {
+                conte.sSexo = "M";
+            }
+            else
+            {
+                conte.sSexo = "F";
+            }
+
+            conte.Guardar(conte);
+        }
+
+        private void dgvDatos_DataSourceChanged(object sender, EventArgs e)
+        {
+            lblTotalRegistros.Text = "Total Pacientes: " + dgvDatos.Rows.Count.ToString();
+        }
+
+      
     }
 }

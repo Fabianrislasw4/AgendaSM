@@ -70,6 +70,10 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<paciente>()
+                .Property(e => e.sSexo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<paciente>()
                 .Property(e => e.sDerechohabiente)
                 .IsUnicode(false);
 

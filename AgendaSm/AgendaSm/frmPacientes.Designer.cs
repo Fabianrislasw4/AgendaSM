@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.gpDatos = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNexpediente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCurp = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTelEmergencia = new System.Windows.Forms.TextBox();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFemenino = new System.Windows.Forms.RadioButton();
             this.cbDerechohabiente = new System.Windows.Forms.ComboBox();
@@ -53,28 +53,32 @@
             this.txtApaterno = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gpHerramientas = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApellidoM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.derechohabiente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnHistorial = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.lblTotalRegistros = new System.Windows.Forms.Label();
+            this.cbActivos = new System.Windows.Forms.CheckBox();
             this.btnMenu = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.id_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNexpediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sApaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sAmaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCurp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtFecnac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTelEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpDatos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gpHerramientas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // gpDatos
@@ -82,11 +86,11 @@
             this.gpDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gpDatos.Controls.Add(this.label11);
-            this.gpDatos.Controls.Add(this.textBox3);
+            this.gpDatos.Controls.Add(this.txtNexpediente);
             this.gpDatos.Controls.Add(this.label10);
-            this.gpDatos.Controls.Add(this.textBox2);
+            this.gpDatos.Controls.Add(this.txtCurp);
             this.gpDatos.Controls.Add(this.label9);
-            this.gpDatos.Controls.Add(this.textBox1);
+            this.gpDatos.Controls.Add(this.txtTelEmergencia);
             this.gpDatos.Controls.Add(this.rbMasculino);
             this.gpDatos.Controls.Add(this.rbFemenino);
             this.gpDatos.Controls.Add(this.cbDerechohabiente);
@@ -119,12 +123,12 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "No. Expediente";
             // 
-            // textBox3
+            // txtNexpediente
             // 
-            this.textBox3.Location = new System.Drawing.Point(637, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(102, 20);
-            this.textBox3.TabIndex = 45;
+            this.txtNexpediente.Location = new System.Drawing.Point(637, 32);
+            this.txtNexpediente.Name = "txtNexpediente";
+            this.txtNexpediente.Size = new System.Drawing.Size(102, 20);
+            this.txtNexpediente.TabIndex = 45;
             // 
             // label10
             // 
@@ -135,12 +139,12 @@
             this.label10.TabIndex = 44;
             this.label10.Text = "CURP";
             // 
-            // textBox2
+            // txtCurp
             // 
-            this.textBox2.Location = new System.Drawing.Point(26, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 20);
-            this.textBox2.TabIndex = 43;
+            this.txtCurp.Location = new System.Drawing.Point(26, 152);
+            this.txtCurp.Name = "txtCurp";
+            this.txtCurp.Size = new System.Drawing.Size(252, 20);
+            this.txtCurp.TabIndex = 43;
             // 
             // label9
             // 
@@ -151,12 +155,12 @@
             this.label9.TabIndex = 42;
             this.label9.Text = "No. Teléfono de Emergencia";
             // 
-            // textBox1
+            // txtTelEmergencia
             // 
-            this.textBox1.Location = new System.Drawing.Point(456, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 41;
+            this.txtTelEmergencia.Location = new System.Drawing.Point(456, 143);
+            this.txtTelEmergencia.Name = "txtTelEmergencia";
+            this.txtTelEmergencia.Size = new System.Drawing.Size(144, 20);
+            this.txtTelEmergencia.TabIndex = 41;
             // 
             // rbMasculino
             // 
@@ -214,9 +218,10 @@
             // 
             // dtpFecNac
             // 
+            this.dtpFecNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecNac.Location = new System.Drawing.Point(26, 89);
             this.dtpFecNac.Name = "dtpFecNac";
-            this.dtpFecNac.Size = new System.Drawing.Size(238, 20);
+            this.dtpFecNac.Size = new System.Drawing.Size(176, 20);
             this.dtpFecNac.TabIndex = 35;
             this.dtpFecNac.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
             // 
@@ -312,6 +317,37 @@
             this.txtBusqueda.TabIndex = 0;
             this.txtBusqueda.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuevo.BackgroundImage = global::AgendaSm.Properties.Resources.add;
+            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Location = new System.Drawing.Point(664, 13);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(54, 51);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            this.btnNuevo.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BackgroundImage = global::AgendaSm.Properties.Resources.buscar2;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(590, 19);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(46, 45);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
+            // 
             // gpHerramientas
             // 
             this.gpHerramientas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -325,80 +361,6 @@
             this.gpHerramientas.TabIndex = 42;
             this.gpHerramientas.TabStop = false;
             this.gpHerramientas.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.No,
-            this.ApellidoP,
-            this.ApellidoM,
-            this.Nombre,
-            this.Edad,
-            this.derechohabiente});
-            this.dataGridView1.Location = new System.Drawing.Point(50, 311);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1065, 167);
-            this.dataGridView1.TabIndex = 43;
-            // 
-            // No
-            // 
-            this.No.HeaderText = "No.";
-            this.No.Name = "No";
-            this.No.Width = 50;
-            // 
-            // ApellidoP
-            // 
-            this.ApellidoP.HeaderText = "Apellido Paterno";
-            this.ApellidoP.Name = "ApellidoP";
-            this.ApellidoP.Width = 150;
-            // 
-            // ApellidoM
-            // 
-            this.ApellidoM.HeaderText = "Apellido Materno";
-            this.ApellidoM.Name = "ApellidoM";
-            this.ApellidoM.Width = 150;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre(s)";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 150;
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.Name = "Edad";
-            this.Edad.Width = 50;
-            // 
-            // derechohabiente
-            // 
-            this.derechohabiente.HeaderText = "DerechoHabiente";
-            this.derechohabiente.Name = "derechohabiente";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 493);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "No. Pacientes : ";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1003, 492);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 17);
-            this.checkBox1.TabIndex = 45;
-            this.checkBox1.Text = "Pacientes de Baja";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
@@ -458,38 +420,54 @@
             this.btnGuardar.Size = new System.Drawing.Size(46, 45);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             this.btnGuardar.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
             // 
-            // btnNuevo
+            // dgvDatos
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Transparent;
-            this.btnNuevo.BackgroundImage = global::AgendaSm.Properties.Resources.add;
-            this.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.FlatAppearance.BorderSize = 0;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Location = new System.Drawing.Point(664, 13);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(54, 51);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            this.btnNuevo.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
+            this.dgvDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_paciente,
+            this.sNexpediente,
+            this.sApaterno,
+            this.sAmaterno,
+            this.sNombre,
+            this.sCurp,
+            this.bSexo,
+            this.dtFecnac,
+            this.sTelefono,
+            this.sTelEmergencia});
+            this.dgvDatos.Location = new System.Drawing.Point(50, 311);
+            this.dgvDatos.Name = "dgvDatos";
+            this.dgvDatos.Size = new System.Drawing.Size(1065, 167);
+            this.dgvDatos.TabIndex = 43;
+            this.dgvDatos.DataSourceChanged += new System.EventHandler(this.dgvDatos_DataSourceChanged);
             // 
-            // btnBuscar
+            // lblTotalRegistros
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BackgroundImage = global::AgendaSm.Properties.Resources.buscar2;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(590, 19);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(46, 45);
-            this.btnBuscar.TabIndex = 1;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
+            this.lblTotalRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTotalRegistros.AutoSize = true;
+            this.lblTotalRegistros.Location = new System.Drawing.Point(66, 493);
+            this.lblTotalRegistros.Name = "lblTotalRegistros";
+            this.lblTotalRegistros.Size = new System.Drawing.Size(83, 13);
+            this.lblTotalRegistros.TabIndex = 44;
+            this.lblTotalRegistros.Text = "No. Pacientes : ";
+            // 
+            // cbActivos
+            // 
+            this.cbActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbActivos.AutoSize = true;
+            this.cbActivos.Checked = true;
+            this.cbActivos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbActivos.Location = new System.Drawing.Point(1003, 492);
+            this.cbActivos.Name = "cbActivos";
+            this.cbActivos.Size = new System.Drawing.Size(112, 17);
+            this.cbActivos.TabIndex = 45;
+            this.cbActivos.Text = "Pacientes de Baja";
+            this.cbActivos.UseVisualStyleBackColor = true;
             // 
             // btnMenu
             // 
@@ -508,14 +486,74 @@
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             this.btnMenu.MouseHover += new System.EventHandler(this.dtpFecNac_MouseHover);
             // 
+            // id_paciente
+            // 
+            this.id_paciente.DataPropertyName = "id_paciente";
+            this.id_paciente.HeaderText = "No.";
+            this.id_paciente.Name = "id_paciente";
+            // 
+            // sNexpediente
+            // 
+            this.sNexpediente.DataPropertyName = "sNexpediente";
+            this.sNexpediente.HeaderText = "No. Expediente";
+            this.sNexpediente.Name = "sNexpediente";
+            // 
+            // sApaterno
+            // 
+            this.sApaterno.DataPropertyName = "sApaterno";
+            this.sApaterno.HeaderText = "Apellido Paterno";
+            this.sApaterno.Name = "sApaterno";
+            // 
+            // sAmaterno
+            // 
+            this.sAmaterno.DataPropertyName = "sAmaterno";
+            this.sAmaterno.HeaderText = "Apellido Materno";
+            this.sAmaterno.Name = "sAmaterno";
+            // 
+            // sNombre
+            // 
+            this.sNombre.DataPropertyName = "sNombre";
+            this.sNombre.HeaderText = "Nombre (s)";
+            this.sNombre.Name = "sNombre";
+            // 
+            // sCurp
+            // 
+            this.sCurp.DataPropertyName = "sCurp";
+            this.sCurp.HeaderText = "CURP";
+            this.sCurp.Name = "sCurp";
+            // 
+            // bSexo
+            // 
+            this.bSexo.DataPropertyName = "bSexo";
+            this.bSexo.HeaderText = "Sexo";
+            this.bSexo.Name = "bSexo";
+            // 
+            // dtFecnac
+            // 
+            this.dtFecnac.DataPropertyName = "dtFecnac";
+            this.dtFecnac.HeaderText = "Edad";
+            this.dtFecnac.Name = "dtFecnac";
+            // 
+            // sTelefono
+            // 
+            this.sTelefono.DataPropertyName = "sTelefono";
+            this.sTelefono.HeaderText = "Teléfono";
+            this.sTelefono.Name = "sTelefono";
+            // 
+            // sTelEmergencia
+            // 
+            this.sTelEmergencia.DataPropertyName = "sTelEmergencia";
+            this.sTelEmergencia.HeaderText = "Teléfono de Emergencia";
+            this.sTelEmergencia.Name = "sTelEmergencia";
+            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1127, 528);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbActivos);
+            this.Controls.Add(this.lblTotalRegistros);
+            this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.gpHerramientas);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnMenu);
@@ -527,12 +565,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salud Mental - Pacientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPacientes_Load);
             this.gpDatos.ResumeLayout(false);
             this.gpDatos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gpHerramientas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,11 +581,11 @@
 
         private System.Windows.Forms.GroupBox gpDatos;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNexpediente;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCurp;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTelEmergencia;
         private System.Windows.Forms.RadioButton rbMasculino;
         private System.Windows.Forms.RadioButton rbFemenino;
         private System.Windows.Forms.ComboBox cbDerechohabiente;
@@ -572,15 +611,19 @@
         private System.Windows.Forms.Button btnHistorial;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ApellidoM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn derechohabiente;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.Label lblTotalRegistros;
+        private System.Windows.Forms.CheckBox cbActivos;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_paciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNexpediente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sApaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sAmaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sCurp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtFecnac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sTelEmergencia;
     }
 }
