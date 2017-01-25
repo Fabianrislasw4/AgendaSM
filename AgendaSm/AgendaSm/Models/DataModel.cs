@@ -48,6 +48,14 @@
                 .IsUnicode(false);
 
             modelBuilder.Entity<doctore>()
+               .Property(e => e.tHentrada)
+               .IsUnicode(false);
+
+            modelBuilder.Entity<doctore>()
+               .Property(e => e.tHsalida)
+               .IsUnicode(false);
+
+            modelBuilder.Entity<doctore>()
                 .HasMany(e => e.consultas)
                 .WithRequired(e => e.doctore)
                 .HasForeignKey(e => e.pk_doctor)

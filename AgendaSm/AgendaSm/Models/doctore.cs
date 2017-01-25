@@ -43,14 +43,22 @@ namespace AgendaSm.Models
         [StringLength(50)]
         public string sCedula { get; set; }
 
+        [Required]
+        [StringLength(20)]
+        public string tHentrada { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string tHsalida { get; set; }
+
         //public bool? bSexo { get; set; }
         [Required]
         [StringLength(5)]
         public string sSexo { get; set; }
 
-        public TimeSpan? tHentrada { get; set; }
+      //  public TimeSpan? tHentrada { get; set; }
 
-        public TimeSpan? tHsalida { get; set; }
+       // public TimeSpan? tHsalida { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime dtFecnac { get; set; }

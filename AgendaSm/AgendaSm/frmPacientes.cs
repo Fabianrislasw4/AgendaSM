@@ -22,9 +22,6 @@ namespace AgendaSm
             dgvDatos.DataSource = datos;
 
             DateTime fecha = conte.dtFecnac;
-
-
-
         }
         public frmPacientes()
         {
@@ -106,8 +103,6 @@ namespace AgendaSm
             txtNombre.Clear();
             dtpFecNac.ResetText();
             txtCurp.Clear();
-            rbFemenino.ResetText();
-            rbMasculino.ResetText();
             txtTelefono.Clear();
             txtTelEmergencia.Clear();
             txtNexpediente.Clear();

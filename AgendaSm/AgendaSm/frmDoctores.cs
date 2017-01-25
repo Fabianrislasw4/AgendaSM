@@ -15,27 +15,24 @@ namespace AgendaSm
     {
         doctore ctx = new doctore();
         frmDoctores frmDoctore;
-        public frmDoctores()
-        {
-            InitializeComponent();
-            dgvDoctores.AutoGenerateColumns = false;
-        }
-
-        public frmDoctores( frmDoctores fDoctores)
-        {
-            InitializeComponent();
-            this.frmDoctore = fDoctores;
-        }
+  
         public void LlenarCuadricula()
         {
             var datos = ctx.getAll(cbActivos.Checked);
             dgvDoctores.DataSource = datos;
 
-            DateTime fecha = ctx.dtFecnac;
-
-
-
         }
+        public frmDoctores()
+        {
+            InitializeComponent();
+            dgvDoctores.AutoGenerateColumns = false;
+        }
+        public frmDoctores( frmDoctores fDoctores)
+        {
+            InitializeComponent();
+            this.frmDoctore = fDoctores;
+        }
+   
         private void btnMenu_MouseHover(object sender, EventArgs e)
         {
             ttMensaje.IsBalloon = true;
@@ -61,19 +58,11 @@ namespace AgendaSm
         {
             this.Close();
         }
-
-        private void gpHerramientas_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmDoctores_Load(object sender, EventArgs e)
         {
             LlenarCuadricula();
-            HorasEntradasYSalidas();
-            
+            //HorasEntradasYSalidas();         
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
@@ -84,11 +73,7 @@ namespace AgendaSm
             ctx.sTelefono = txtTelefono.Text.Trim();
             ctx.sTelefono = txtTelefono.Text.Trim();
             ctx.sCedula = txtCedula.Text.Trim();
-            //ctx.tHentrada = Convert.ToDouble(cbEntrada.Text);
-            //ctx.tHsalida = Convert.ToDouble(cbSalida.Text);
-
             ctx.bStatus = true;
-
             if (rbMasculino.Checked == true)
             {
                 ctx.sSexo = "M";
@@ -97,17 +82,18 @@ namespace AgendaSm
             {
                 ctx.sSexo = "F";
             }
-
             ctx.dtFecnac = Convert.ToDateTime(dtpFecNac.Text);
-            ctx.Guardar(ctx);
 
+            ctx.tHentrada = cbEntrada.SelectedItem.ToString();
+            ctx.tHsalida = cbSalida.SelectedIndex.ToString();
+
+            ctx.Guardar(ctx);
             LlenarCuadricula();
             LimpiarCampos();
         }
 
         private void HorasEntradasYSalidas()
         {
-
             cbEntrada.Items.Clear();
             cbSalida.Items.Clear();
 
@@ -127,8 +113,6 @@ namespace AgendaSm
             txtNombre.Clear();
             dtpFecNac.ResetText();
             txtCurp.Clear();
-            rbFemenino.ResetText();
-            rbMasculino.ResetText();
             txtTelefono.Clear();
             txtCedula.Clear();
             
