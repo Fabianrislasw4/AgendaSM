@@ -33,6 +33,7 @@
             this.btnPaciente = new System.Windows.Forms.Button();
             this.btnAgenda = new System.Windows.Forms.Button();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDoctores
@@ -85,11 +86,21 @@
             this.btnAgenda.UseVisualStyleBackColor = false;
             this.btnAgenda.MouseHover += new System.EventHandler(this.frmMenu_MouseHover);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(121, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(231, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Prueba Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 421);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDoctores);
             this.Controls.Add(this.btnPaciente);
             this.Controls.Add(this.btnAgenda);
@@ -110,5 +121,6 @@
         private System.Windows.Forms.Button btnPaciente;
         private System.Windows.Forms.Button btnAgenda;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.Button button1;
     }
 }
